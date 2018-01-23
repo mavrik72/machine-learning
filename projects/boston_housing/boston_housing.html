@@ -13865,7 +13865,8 @@ This technique breaks the dataset into multiple equal parts, 'k'.</p>
 <p>{k1, k2+k3}</p>
 <p>{k2, k1+k3}</p>
 <p>{k3, k1+k2}</p>
-<p>This technique allows us to reduce bias and variance by identifying models with lower validation errors.  We are able to use out dataset more efficiently while reducing the overhead of expensive computation.</p>
+<p>This technique allows us to reduce bias and variance by identifying models with lower validation errors.</p>
+<p>Overall, the k-fold cross-validation uses every point to train the model k-1 times and each point is used to validate the model one time.  From this, we get the average error which provides for a better generalization model.</p>
 
 </div>
 </div>
@@ -14124,10 +14125,17 @@ Predicted selling price for Client 3&#39;s home: $931,636.36
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong>
-Predicted selling price for Client 1's home: $403,025.00</p>
-<p>Predicted selling price for Client 2's home: $237,478.72</p>
-<p>Predicted selling price for Client 3's home: $931,636.36</p>
+<p><strong>Answer: </strong></p>
+<p>Statistics for Boston housing dataset:</p>
+<p>Minimum price: $ 105,000.00</p>
+<p>Maximum price: $ 1,024,800.00</p>
+<p>Mean price: $ 454,342.94</p>
+<p>Median price $ 438,900.00</p>
+<p>Standard deviation of prices: $ 165,171.13</p>
+<hr>
+<h2 id="Predicted-selling-price-for-Client-1's-home:-$-403,025.00">Predicted selling price for Client 1's home: $ 403,025.00<a class="anchor-link" href="#Predicted-selling-price-for-Client-1's-home:-$-403,025.00">&#182;</a></h2><p>Client 1 home has a below median number of rooms (bad), student/teacher ratio (good), and neighborhood poverty level (good).  This would lead to an average home value of $ 438k +/-$ 165k.  The recommended price of $ 403,025 is well within the standard deviation.</p>
+<h2 id="Predicted-selling-price-for-Client-2's-home:-$-237,478.72">Predicted selling price for Client 2's home: $ 237,478.72<a class="anchor-link" href="#Predicted-selling-price-for-Client-2's-home:-$-237,478.72">&#182;</a></h2><p>Client 2 home has a near minimum number of rooms (bad), maximum student/teacher ratio (bad), and near maximum neighborhood poverty level (bad).  This would lead to an average home value closer to the minimum of $ 105,000.  The recommended price of $ 237,478.72 is within the standard deviation.</p>
+<h2 id="Predicted-selling-price-for-Client-3's-home:-$-931,636.36">Predicted selling price for Client 3's home: $ 931,636.36<a class="anchor-link" href="#Predicted-selling-price-for-Client-3's-home:-$-931,636.36">&#182;</a></h2><p>Client 3 home has an above median number of rooms (good), below minimum student/teacher ratio (good), and near minimum neighborhood poverty level (good).  This would lead to an average home value closer to the maximum of $ 1,024,800.00.  The recommended price of $ 931,636.36 is within the standard deviation.</p>
 <p>Based on the "features", I would have ranked the houses in the following order (lowest to highest):
 2,1,3.</p>
 <p>The predicted prices fit my guessed order.  Therefore, I believe these are reasonable prices.</p>
